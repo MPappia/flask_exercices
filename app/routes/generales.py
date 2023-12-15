@@ -4,7 +4,7 @@ from flask import render_template
 
 @app.route("/")
 def accueil():
-    return render_template("pages/accueil.html")
+    return render_template("/home.html")
 
 #REV-2
 @app.route("/division/<int:numerateur>/<int:denominateur>", methods=['GET'])
