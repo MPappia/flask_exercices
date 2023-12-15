@@ -1,5 +1,6 @@
 from ..app import app
-from flask import render_template
+from flask import render_template,request
+import requests
 
 
 @app.route("/")
@@ -502,6 +503,15 @@ def parcs_eoliens():
    }
 ]
     return render_template('parcs_eoliens.html', données_json=données_json)
+
+#APP-1 
+
+@app.route("/retrieve_wikidata/<string:id>")
+def retrieve_wikidata(id:str): 
+     url=f"https://www.wikidata.org/wiki/{id}"
+     response = requests.get(url)
+
+     return response.text
 
 # Retour cours
 @app.route("/pays/<string:nom>")
