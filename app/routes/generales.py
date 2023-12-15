@@ -5,9 +5,6 @@ from flask import render_template
 @app.route("/")
 def accueil():
     return render_template("pages/accueil.html")
-@app.route("/home")
-def home():
-    return "Hello World !"
 
 #REV-2
 @app.route("/division/<int:numerateur>/<int:denominateur>", methods=['GET'])
