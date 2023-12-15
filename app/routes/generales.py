@@ -15,7 +15,7 @@ def division(numerateur, denominateur) :
 #REV-3
 
 
-
+# Retour cours
 @app.route("/pays/<string:nom>")
 def pays(nom):
     return render_template("pages/pays.html", pays=nom)
