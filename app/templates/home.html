@@ -28,31 +28,31 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>France</td>
-                <td>Paris</td>
-                <td>Europe</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>États-Unis</td>
-                <td>Washington</td>
-                <td>Amérique</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Égypte</td>
-                <td>Le Caire</td>
-                <td>Afrique</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Chine</td>
-                <td>Beijing</td>
-                <td>Asie</td>
-            </tr>
-        </tbody>
+          <tr>
+              <td>1</td>
+              <td><a href="{{ url_for('pays', nom='France') }}">France</a></td>
+              <td>Paris</td>
+              <td>Europe</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td><a href="{{ url_for('pays', nom='États-Unis') }}">États-Unis</a></td>
+              <td>Washington</td>
+              <td>Amérique</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td><a href="{{ url_for('pays', nom='Égypte') }}">Égypte</a></td>
+              <td>Le Caire</td>
+              <td>Afrique</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td><a href="{{ url_for('pays', nom='Chine') }}">Chine</a></td>
+              <td>Beijing</td>
+              <td>Asie</td>
+          </tr>
+      </tbody>
     </table>
 </div>
 {% endblock %}
