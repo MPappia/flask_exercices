@@ -1,7 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 {% block styles %}
 {{ super() }}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 {% endblock %}
 {% block title %}Factbook | {{pays}}{% endblock %}
 
@@ -10,14 +10,12 @@
     background-image: url('https://www.cia.gov/the-world-factbook/static/778a257ec6e116fbb7aac018c170b3eb/47498/wfb-feature-world.jpg');
     height: 450px; width:100%;overflow:hidden;margin-top: -300px;"></div>
 
-
-
 <div class="container-fluid text-left div-home">
     <h1>Bienvenue sur l'application du Factbook!</h1>
-    <p>Voici le lien vers le site officiel : <a
-          href="https://www.cia.gov/the-world-factbook/">https://www.cia.gov/the-world-factbook/</a></p>
+    <p>Voici le lien vers le site officiel : <a href="https://www.cia.gov/the-world-factbook/">https://www.cia.gov/the-world-factbook/</a></p>
 
     <h2>Données du pays</h2>
+
     <table class="table">
         <thead>
             <tr>
@@ -28,31 +26,32 @@
             </tr>
         </thead>
         <tbody>
-          <tr>
-              <td>1</td>
-              <td><a href="{{ url_for('pays', nom='France') }}">France</a></td>
-              <td>Paris</td>
-              <td>Europe</td>
-          </tr>
-          <tr>
-              <td>2</td>
-              <td><a href="{{ url_for('pays', nom='États-Unis') }}">États-Unis</a></td>
-              <td>Washington</td>
-              <td>Amérique</td>
-          </tr>
-          <tr>
-              <td>3</td>
-              <td><a href="{{ url_for('pays', nom='Égypte') }}">Égypte</a></td>
-              <td>Le Caire</td>
-              <td>Afrique</td>
-          </tr>
-          <tr>
-              <td>4</td>
-              <td><a href="{{ url_for('pays', nom='Chine') }}">Chine</a></td>
-              <td>Beijing</td>
-              <td>Asie</td>
-          </tr>
-      </tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="#" class="info-pays">France</a></td>
+                <td>Paris</td>
+                <td>Europe</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#" class="info-pays">États-Unis</a></td>
+                <td>Washington</td>
+                <td>Amérique</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#" class="info-pays">Égypte</a></td>
+                <td>Le Caire</td>
+                <td>Afrique</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#" class="info-pays">Chine</a></td>
+                <td>Beijing</td>
+                <td>Asie</td>
+            </tr>
+        </tbody>
     </table>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </div>
 {% endblock %}
